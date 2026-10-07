@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#071710">
+    <meta name="description" content="Explore the Autheo Stack: distributed hosting, blockchain verification, agent tooling, scoped identity, and proof-aware asset tracking. An architecture map with honest implementation boundaries.">
+    <title>Autheo Stack — Infrastructure for verifiable work</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="shell nav-wrap">
+        <a href="#top" class="wordmark" aria-label="Autheo Stack home"><span class="brand-glyph" aria-hidden="true"><i></i><i></i><i></i></span><span>AUTHEO<span class="wordmark-sub">/ STACK</span></span></a>
+        <nav aria-label="Main navigation" class="nav-links"><a href="#architecture">Architecture</a><a href="#layers">The layers</a><a href="#boundaries">What is real</a></nav>
+        <a class="nav-action" href="https://github.com/autheo-os/autheo-stack" target="_blank" rel="noopener noreferrer">View source <span aria-hidden="true">↗</span></a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero shell" id="top" aria-labelledby="hero-title">
+        <div class="eyebrow"><span class="signal" aria-hidden="true"></span> THE AUTHEO ECOSYSTEM <span class="eyebrow-line"></span> ARCHITECTURE / 01</div>
+        <div class="hero-grid">
+          <div>
+            <h1 id="hero-title">The infrastructure<br>behind <em>verifiable work.</em></h1>
+            <p class="hero-lead">Run applications. Coordinate agents. Follow assets. Keep a shared trail of what happened—and separate evidence from settlement.</p>
+            <div class="hero-actions"><a class="button button-primary" href="#architecture">Explore the stack <span aria-hidden="true">↘</span></a><a class="button button-ghost" href="#boundaries">See the boundaries <span aria-hidden="true">↗</span></a></div>
+          </div>
+          <div class="hero-aside" aria-label="Architecture summary"><span class="aside-kicker">ONE SYSTEM / FIVE CONCERNS</span><strong>Compute → Access → Identity → Evidence → Settlement</strong><span>Not five disconnected dashboards. A map of how the pieces can fit together.</span></div>
+        </div>
+        <div class="hero-bottom"><span>SCROLL TO TRACE THE SYSTEM</span><span aria-hidden="true">↓</span><span>PUBLIC ARCHITECTURE MAP · NO LOGIN</span></div>
+      </section>
+
+      <section id="architecture" class="map-section" aria-labelledby="map-title">
+        <div class="shell">
+          <div class="section-heading"><div><span class="overline">01 / SYSTEM MAP</span><h2 id="map-title">One stack.<br><span>Distinct responsibilities.</span></h2></div><p>Applications and agents sit above a shared compute fabric. An MCP bridge exposes tools; identities and custody events supply context. Selected proofs can be verified on-chain—<strong>not every event is a payment.</strong></p></div>
+          <div class="map-frame">
+            <div class="map-topline"><span><span class="signal small" aria-hidden="true"></span> AUTHEO / SYSTEM SCHEMATIC</span><span>CONCEPTUAL INTEGRATION MAP <span class="dim">· NOT A LIVE NETWORK VIEW</span></span></div>
+            <img class="stack-svg" src="stack-map.svg" width="1200" height="660" alt="Autheo architecture: AssetTrack and agent environment above an MCP tool bridge and blockchain verification layer, all supported by Layer 0 hosting. Arrows show requests and proof, not automatic payments.">
+            <div class="mobile-map" aria-label="The five Autheo layers in a readable vertical map">
+              <div class="mobile-map-row"><span class="mobile-number">05 / APPLICATION</span><strong>AssetTrack</strong><span>Shipment handoffs and exceptions · illustrative DID labels</span></div>
+              <div class="mobile-map-row"><span class="mobile-number">04 / AUTHORITY</span><strong>Agent environment</strong><span>Signed identity and scoped mandates · local reference</span></div>
+              <div class="mobile-map-connector" aria-hidden="true">↓ &nbsp;TOOL REQUESTS / PROOF EVENTS&nbsp; ↓</div>
+              <div class="mobile-map-row"><span class="mobile-number">03 / INTERFACE</span><strong>MCP server</strong><span>Agent-facing tools · configured prototype</span></div>
+              <div class="mobile-map-row"><span class="mobile-number">02 / PROOF RAIL</span><strong>Layer 1</strong><span>Verification and settlement · integration vision</span></div>
+              <div class="mobile-map-connector" aria-hidden="true">↓ &nbsp;HOSTED ON&nbsp; ↓</div>
+              <div class="mobile-map-row mobile-map-base"><span class="mobile-number">01 / FOUNDATION</span><strong>Layer 0 / DevHub</strong><span>Distributed hosting and deployments</span></div>
+            </div>
+            <div class="map-caption"><span>↑ APPLICATIONS &amp; AGENTS</span><span>↓ INFRASTRUCTURE &amp; VERIFICATION</span></div>
+          </div>
+          <p class="map-equivalent">Reading order: <a href="#layer-l0">L0 hosting</a> runs services; <a href="#layer-mcp">MCP</a> offers agent-facing tools; <a href="#layer-agents">agent trust</a> describes scoped identity; <a href="#layer-assets">AssetTrack</a> records custody; <a href="#layer-l1">L1</a> is the intended verification and settlement rail. The diagram is conceptual; these components are not asserted to be automatically connected.</p>
+        </div>
+      </section>
+
+      <section id="layers" class="layers shell" aria-labelledby="layers-title">
+        <div class="section-heading"><div><span class="overline">02 / THE COMPONENTS</span><h2 id="layers-title">From infrastructure<br><span>to accountable action.</span></h2></div><p>Each layer has its own job. Follow the references to inspect its current implementation and limitations.</p></div>
+        <div class="layer-grid">
+          <article class="layer-card foundation" id="layer-l0"><div class="card-head"><span class="card-index">01 / FOUNDATION</span><span class="pill">PLATFORM</span></div><div class="card-visual visual-host" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><h3>Layer 0 <span>Compute fabric</span></h3><p>DevHub brings projects, deployments and services onto a distributed, local-first hosting fabric. It is where the applications and tooling can run—not the ledger where custody is decided.</p><a href="https://github.com/autheo-os/L0_devhub_deploy" target="_blank" rel="noopener noreferrer">Explore Layer 0 <span aria-hidden="true">↗</span></a></article>
+          <article class="layer-card" id="layer-l1"><div class="card-head"><span class="card-index">02 / VERIFICATION</span><span class="pill pill-outline">INTEGRATION VISION</span></div><div class="card-visual visual-chain" aria-hidden="true"><span>◇</span><span>◇</span><span>◇</span></div><h3>Layer 1 <span>Proof &amp; settlement</span></h3><p>An intended blockchain rail for verification and token settlement. Keep documents and telemetry off-chain; anchor selected digests and signer references only after validation. A receipt is not itself a release of funds.</p><a href="https://github.com/autheo-os/autheo-MCP" target="_blank" rel="noopener noreferrer">Inspect chain read tooling <span aria-hidden="true">↗</span></a></article>
+          <article class="layer-card" id="layer-mcp"><div class="card-head"><span class="card-index">03 / INTERFACE</span><span class="pill">READ-ONLY PROTOTYPE</span></div><div class="card-visual visual-interface" aria-hidden="true"><span>{ agent }</span><span class="visual-link"></span><span>{ tools }</span></div><h3>MCP server <span>Agent-facing tools</span></h3><p>A Model Context Protocol surface for querying DevHub, Marketplace, chain data and trust summaries. Tool access does not automatically grant custody authority or enable a purchase.</p><a href="https://github.com/autheo-os/autheo-MCP" target="_blank" rel="noopener noreferrer">Explore MCP tools <span aria-hidden="true">↗</span></a></article>
+          <article class="layer-card" id="layer-agents"><div class="card-head"><span class="card-index">04 / AUTHORITY</span><span class="pill pill-outline">LOCAL REFERENCE</span></div><div class="card-visual visual-identity" aria-hidden="true"><span class="identity-core">ID</span><span class="orbit orbit-one"></span><span class="orbit orbit-two"></span></div><h3>Agent environment <span>Scoped identity</span></h3><p>A reference trust layer explores signed agent passports, mandates, policy checks and receipts. Its identities are prototype credentials, not a production DID registry or live wallet.</p><a href="https://github.com/autheo-os/autheo-agent-environment" target="_blank" rel="noopener noreferrer">Explore agent trust <span aria-hidden="true">↗</span></a></article>
+          <article class="layer-card" id="layer-assets"><div class="card-head"><span class="card-index">05 / OPERATIONS</span><span class="pill pill-outline">PILOT WORKFLOW</span></div><div class="card-visual visual-route" aria-hidden="true"><span>SPRINGFIELD</span><b></b><span>DENTON</span></div><h3>AssetTrack <span>Custody, not just location</span></h3><p>Follow shipment handoffs, documents, seal and exception states. The reefer pilot's <code>did:</code> identifiers are illustrative labels—not registered DIDs or sensor-attested readings.</p><a href="https://github.com/ThothDivision/autheo-asset-track" target="_blank" rel="noopener noreferrer">Explore AssetTrack <span aria-hidden="true">↗</span></a></article>
+          <article class="layer-card narrative"><span class="card-index">THE SHARED IDEA</span><div class="narrative-symbol" aria-hidden="true">↗</div><h3>Make the handoff<br>inspectable.</h3><p>Infrastructure hosts the work. Tools expose it. Identity defines who may act. Custody events record what changed. Verification and settlement follow valid proofs, never a nice-looking status badge.</p><a href="#boundaries">Read the trust boundaries <span aria-hidden="true">↗</span></a></article>
+        </div>
+      </section>
+
+      <section class="flow-section" aria-labelledby="flow-title"><div class="shell"><div class="section-heading"><div><span class="overline">03 / A SINGLE LOAD</span><h2 id="flow-title">What would move<br><span>through the stack?</span></h2></div><p>A brokered reefer load makes the architecture concrete without pretending a demo generated real-world proof.</p></div><ol class="flow-list"><li><span>01</span><div><h3>Run the workspace</h3><p>Layer 0 hosts the project and its supporting services.</p></div></li><li><span>02</span><div><h3>Ask with authority</h3><p>An agent queries MCP tools; a scoped mandate governs what that agent may request in the trust prototype.</p></div></li><li><span>03</span><div><h3>Record custody</h3><p>AssetTrack models tender → pickup BOL and seal → transit → receiver-signed POD. Exceptions pause the clean path.</p></div></li><li><span>04</span><div><h3>Verify, then settle</h3><p>Future integrations can anchor validated proof and release payment only when authorized conditions hold. The current pilot does neither.</p></div></li></ol></div></section>
+
+      <section id="boundaries" class="boundary shell" aria-labelledby="boundary-title"><div class="boundary-inner"><div><span class="overline">04 / IMPLEMENTATION BOUNDARY</span><h2 id="boundary-title">A map of the direction.<br><span>Not a claim of completion.</span></h2><p>This site illustrates how independently developed Autheo projects can fit together. Today, the agent environment is a local reference simulation, the MCP surface is a configured prototype, and AssetTrack's sample DIDs and reefer handoffs are illustrative. Production DID registration, cross-product integration and automatic on-chain settlement require additional work and verification.</p></div><div class="boundary-stamp" aria-hidden="true"><span>DESIGN INTENT</span><strong>≠</strong><span>LIVE PROOF</span></div></div></section>
+    </main>
+    <footer class="footer"><div class="shell footer-inner"><a href="#top" class="wordmark" aria-label="Back to top"><span class="brand-glyph" aria-hidden="true"><i></i><i></i><i></i></span><span>AUTHEO<span class="wordmark-sub">/ STACK</span></span></a><span>Infrastructure for verifiable work.</span><a href="https://github.com/autheo-os/autheo-stack" target="_blank" rel="noopener noreferrer">Source on GitHub ↗</a></div></footer>
+  </body>
+</html>
