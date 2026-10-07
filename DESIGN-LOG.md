@@ -234,3 +234,87 @@ graph LR
 - [x] Anchor Ledger and updated Mermaid graph: preceding sections.
 - [x] Double-loop paragraph: Graph amendments above.
 - [x] Final response must state Adaptive mode, `rg`/Mermaid/Chrome/progress-card tooling, S1–S5 met and any skipped steps; screenshots are local artifacts not committed.
+
+## Revision: Marketplace provider orchestration (2026-10-06)
+
+**Reopened Frontier:** The requested sixth component changes M1's diagram structure and M2's source-backed copy. This resumes the prior Adaptive DADA run rather than restarting it. Marketplace is a *provider-supply sidecar to L0*, not a replacement L0 scheduler and not a Layer 1 payment processor. Source: `ThothDivision/autheo_marketplace_deploy` README, which assigns provider profiles, offers, THEO terms and provider-side reporting to Marketplace and deploy/rent to DevHub; its binding verifier is not yet wired and preview listings are illustrative.
+
+| Candidate | Reached via | Status |
+| --- | --- | --- |
+| Provider-sidecar band with Marketplace → L0 arrow | M1 layout dependency REOPENED; `samBreak` —loosens (dotted)→ `mb` | OPEN / M5 |
+| Keep Layer 1 separate from capacity orchestration | M2 truth boundary REOPENED; `maya` —tempers strangeness of (dotted)→ `shklovsky` | OPEN / M5 |
+| Translate six nodes to a legible mobile reading order | M3 responsive dependency REOPENED | OPEN / M5 |
+| Source link, provider status, and role description | M2 copy dependency REOPENED | OPEN / M5 |
+
+## Move M5: Provider supply beside the ledger, not inside it (BREAK)
+
+Depends on: M1–M4 REOPENED by the new component.
+Anchors: Stance `Make It Bigger (Paula Scher)` | Rule `Grid Systems in Graphic Design (Josef Müller-Brockmann)` | Breaker `Making and Breaking the Grid (Timothy Samara)` | Counterpoint `Art as Technique (Viktor Shklovsky)` (dotted edge from `MAYA: Most Advanced Yet Acceptable (Raymond Loewy)`).
+Intent: Extend the SVG canvas by one band so Marketplace is visibly an input to L0; keep the blockchain verification rail in its own column and prevent any connector or annotation from touching a card or another label.
+Formal argument: Müller-Brockmann's comparable units keep six responsibilities distinct; Samara's sidecar break avoids turning the provider market into another numbered protocol layer, while Scher's scale makes the physical supply relationship memorable.
+Alternatives rejected: placing Marketplace inside L0 erases the provider/DevHub organizational boundary; inserting it between MCP and L1 falsely implies it controls settlement. A seventh crowded column would compress labels at tablet width.
+Consequence: The new band lengthens the diagram and its mobile translation; card order and explanatory text must reflect a non-automatic preview integration.
+Fence: The grid and whitespace protect reading order and prevent a line from implying custody or authority it does not have. Market→L0 is an intended provider-capacity/terms relationship, never an automatic host allocation.
+Frontier effect: opens visual collision review at full SVG and source/claim review at mobile widths.
+Advanced pole: a distinct provider-sidecar vein feeding the host foundation (`Art as Technique (Viktor Shklovsky)`). Acceptable pole: plain directional label, source link and explicit status (`MAYA: Most Advanced Yet Acceptable (Raymond Loewy)`).
+
+### Panel, M5, round R4 (artifact examined: `site-1440.png`, `site-390.png`, direct SVG text-rectangle geometry)
+
+| Critic | Anchor used | Observed in the work | Verdict | Requested change |
+| --- | --- | --- | --- | --- |
+| Critic: Provocateur (Debord, Shklovsky) | Art as Technique (Viktor Shklovsky) | Marketplace has its own band feeding DevHub, preserving an interesting supply rail rather than a sixth generic layer. | PASS | Keep the asymmetric provider branch. |
+| Critic: Inclusion (Holmes, Mace) | Mismatch: How Inclusion Shapes Design (Kat Holmes) | The 390px vertical translation contains all six components and labels L1 as a separate rail. | PASS | None. |
+| Critic: Usability (Krug, Nielsen) | Don't Make Me Think (Steve Krug) | The main copy, six source cards and mobile map say DevHub deploys while Marketplace coordinates supply. | PASS | None. |
+| Critic: Evidence (Tufte, Cairo) | How Charts Lie (Alberto Cairo) | “node-binding preview” and “integration vision” prevent a preview provider listing from masquerading as live capacity. | PASS | None. |
+| Critic: Craft (Sennett, Bringhurst) | The Elements of Typographic Style (Robert Bringhurst) | Programmatic text geometry found one overlap: “READS / PROOFS →” reaches the Layer 1 title region. | OBJECT / ANDON | Shorten the connector label while leaving the proof claim in the card. |
+
+Statements of meaning: provider offers supply the hosting fabric, while proof sits on a distinct rail. Artist questions: can a connector read as a tool operation without repeating the destination's explanation? Critic questions: does the highlight still communicate MCP→L1 when its label is shorter? Opinions permitted: yes; the arrow and card explain it together. Andon pulled: yes, by Craft. Resolution: ADAPT M5 connector label to “TOOL READS →”; rerender and rerun the objecting critic plus whole panels. M2 copy depends on this relation and is REOPENED for the final review.
+
+### Panel, M5, round R5 (artifact examined: refreshed `site-1440.png` and direct SVG text geometry)
+
+| Critic | Anchor used | Observed in the work | Verdict | Requested change |
+| --- | --- | --- | --- | --- |
+| Critic: Craft (Sennett, Bringhurst) | The Elements of Typographic Style (Robert Bringhurst) | The shorter “TOOL READS →” ends before the Layer 1 title; all 33 SVG text bounding boxes have zero text-text intersections. | PASS | None. |
+| Critic: Inclusion (Holmes, Mace) | Mismatch: How Inclusion Shapes Design (Kat Holmes) | At 390px the provider sidecar is a readable row with its own status and the intended relation to L0. | PASS | None. |
+
+Statements of meaning: the connector reads as a tool operation, not settlement. Artist questions: is the qualification discoverable outside the map? Critic questions: do source cards and trust boundary restate the scheduler split? Opinions permitted: yes, both now do. Andon pulled: no. M5 ADAPT passes.
+
+### Panel, WHOLE, round W3 (artifact examined: refreshed 1440, 768, 390 and 320px renders)
+
+| Critic | Anchor used | Observed in the work | Verdict | Requested change |
+| --- | --- | --- | --- | --- |
+| Critic: Provocateur (Debord, Shklovsky) | Art as Technique (Viktor Shklovsky) | The provider sidecar physically supplies the wide L0 foundation without making L1 another provider box. | PASS | None. |
+| Critic: Inclusion (Holmes, Mace) | Mismatch: How Inclusion Shapes Design (Kat Holmes) | The mobile map states Marketplace is not the scheduler; at tablet width it uses readable rows. | PASS | None. |
+| Critic: Usability (Krug, Nielsen) | Don't Make Me Think (Steve Krug) | Diagram, reading-order paragraph and component card consistently point from provider offers to DevHub placement. | PASS | None. |
+| Critic: Evidence (Tufte, Cairo) | How Charts Lie (Alberto Cairo) | Marketplace preview listings and node bindings are explicitly not guaranteed capacity; L1 remains an integration vision. | PASS | None. |
+| Critic: Craft (Sennett, Bringhurst) | The Elements of Typographic Style (Robert Bringhurst) | Direct SVG geometry reports zero text intersections or out-of-bounds labels; screenshot cards and gutters do not overlap. | PASS | None. |
+
+Statements of meaning: six components but different responsibilities, not six equivalent layers. Artist questions: does the map make L0's scheduler explicit? Critic questions: where is the proof boundary? Opinions permitted: the hosting band and Layer 1 note answer both. Andon pulled: no. No adaptation, scrap, reopen or new frontier item. M1–M4 dependencies pass with the new band and M2 copy passes.
+
+### Panel, WHOLE, round W4 (artifact examined: unchanged refreshed 1440, 768, 390 and 320px renders)
+
+| Critic | Anchor used | Observed in the work | Verdict | Requested change |
+| --- | --- | --- | --- | --- |
+| Critic: Provocateur (Debord, Shklovsky) | Art as Technique (Viktor Shklovsky) | The original schematic's vector vocabulary survives the expansion instead of becoming a bland six-column grid. | PASS | None. |
+| Critic: Inclusion (Holmes, Mace) | The Principles of Universal Design (Ronald Mace et al.) | The mobile translation exposes all six components with legible labels and no horizontal overflow. | PASS | None. |
+| Critic: Usability (Krug, Nielsen) | Don't Make Me Think (Steve Krug) | Every component has a source link, clear role, and adjacent status boundary. | PASS | None. |
+| Critic: Evidence (Tufte, Cairo) | How Charts Lie (Alberto Cairo) | No directional arrow says provider orchestration is settlement or that a preview listing is allocated compute. | PASS | None. |
+| Critic: Craft (Sennett, Bringhurst) | The Elements of Typographic Style (Robert Bringhurst) | Market/tool and provider-term connector labels sit in distinct gutters, away from card titles. | PASS | None. |
+
+Statements of meaning: provider-side coordination is adjacent to, not inside, the hosting scheduler; verification is not a marketplace checkout. Artist questions: should the provider preview be more emphatic? Critic questions: does the card say “preview” twice? Opinions permitted: repetition is intentional to prevent false capacity inference. Andon pulled: no. Second consecutive WHOLE round with no changes.
+
+### Revision Frontier, ledger and stop check
+
+| Candidate | Reached via | Final disposition |
+| --- | --- | --- |
+| Marketplace sidecar → L0 | M1 REOPENED / Samara loosens the grid | TAKEN M5, ADAPTED after R4 |
+| L1 separated from provider orchestration | M2 REOPENED / MAYA bounds rupture | TAKEN M5; card, note and reading order agree |
+| Six-node mobile map | M3 REOPENED | TAKEN M5; 320–900px translation verified |
+| Provider status/source/role | M2 REOPENED | TAKEN M5; Marketplace README cross-check |
+| Center-label collision | R4 Andon | TAKEN M5 ADAPT; R5 geometry zero intersections |
+
+**Anchor ledger delta:** `Grid Systems in Graphic Design (Josef Müller-Brockmann)` KEEP (six distinct component units; surviving objection: a sixth layer would blur placement). `Making and Breaking the Grid (Timothy Samara)` ADAPT (provider sidecar; surviving objection: collision at center gutter). `Visual Hierarchy (Arnheim, Dondis)` KEEP (separate L1 note and L0 band). `MAYA: Most Advanced Yet Acceptable (Raymond Loewy)` KEEP (original authored vector on desktop, role-labelled translation on mobile). `Art as Technique (Viktor Shklovsky)` KEEP (route remains an intentional break, not a live dashboard). The five critics' updated evidence is in R4–W4; no anchor from the old ledger is scrapped.
+
+**Dotted edges revisited:** `samBreak` —loosens→ `mb` applied with the provider sidecar; `maya` —tempers strangeness of→ `shklovsky` applied through literal role copy. Other dotted dispositions remain as logged above. Final Mermaid overlay from the previous closure remains valid, with M5 as an adapted application of `samBreak`; the source anchor graph itself has not changed.
+
+**S1** no OPEN frontier (table above). **S2** all five required critics PASS in W4 with no Andon. **S3** W3 and W4 are consecutive saturated WHOLE rounds. **S4** earlier M4 fluorescent proof waypoint remains in the rerender and was re-reviewed with the new band. **S5** all dotted outgoing edges from active anchors remain applied or declined in the previous disposition and above. The criterion held; the graph amendment “responsive semantic translation” remains relevant and needs no second speculative node. All DADA steps completed using `progress_card`, source Mermaid/`rg`, local Chrome renders and sequential critics; no dedicated graph renderer was available.
