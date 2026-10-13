@@ -1,6 +1,6 @@
 # The Autheo Stack
 
-A single static, public page showing how Marketplace provider orchestration supplies Layer 0 DevHub hosting, while a distinct proposed Layer 1 handles verification/settlement; MCP agent-facing tools, a reference agent trust environment, and the AssetTrack reefer pilot complete the picture. No login, secrets, API, build process, tracking scripts or external fonts.
+A single static, public page showing how Marketplace provider orchestration supplies Layer 0 DevHub hosting, while a distinct proposed Layer 1 handles verification/settlement; MCP agent-facing tools, a reference agent trust environment, the AssetTrack reefer pilot and the non-custodial RWA stack (tokenization, DEX, cross-chain interop with Lumenco physical attestation) complete the picture. No login, secrets, API, build process, tracking scripts or external fonts.
 
 ## Run and deploy
 
@@ -23,6 +23,7 @@ This is an **architecture narrative**, not an integration dashboard or live chai
 | Layer 0 / DevHub | [L0_devhub_deploy](https://github.com/autheo-os/L0_devhub_deploy) | Hosting platform; deployment configuration is separate from this site. |
 | Marketplace provider orchestration | [autheo_marketplace_deploy](https://github.com/ThothDivision/autheo_marketplace_deploy) | Provider profiles, offers, terms and reporting. DevHub remains the scheduler; verified bindings, preview listings and paid capacity are **not** asserted live. |
 | Layer 1 verification and token settlement | [MCP chain reads](https://github.com/autheo-os/autheo-MCP) and [AssetTrack's optional anchoring](https://github.com/ThothDivision/autheo-asset-track) | Integration vision here; this site does not sign, anchor or settle transactions. |
+| RWA stack (tokenization + DEX + interop, Lumenco attestation) | [TaaS plan](https://thothdivision.github.io/autheo-taas-plan/) · development repo private | In development; non-custodial (users hold keys); not live, no assets issued. |
 | MCP tools | [autheo-MCP](https://github.com/autheo-os/autheo-MCP) | Configured prototype; not automatically connected to a live service. |
 | Agent trust environment | [autheo-agent-environment](https://github.com/autheo-os/autheo-agent-environment) | Local reference simulation with signed passports/mandates, not a production DID registry or wallet. |
 | AssetTrack | [autheo-asset-track](https://github.com/ThothDivision/autheo-asset-track) | Owner-scoped reefer pilot; sample `did:` strings are illustrative labels, not registered identities or live telemetry. |
